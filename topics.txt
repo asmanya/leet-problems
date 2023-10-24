@@ -1,0 +1,37 @@
+Listing all the topics used while solving the questions
+
+-- recursion
+
+-- Must
+    # modula behaviour
+    # int_min/int_max
+    # static_cast<>
+
+-- vectors
+    # size()
+    # begin()
+    # end()
+    # pushback()
+    # sort()
+    # v[position]
+
+-- hashing
+
+-- unordered map
+    # pairs
+    # .first
+    # .second
+
+-- loops
+    # for each
+    # for 
+    # while
+
+-- STL
+    # iterators
+        - it
+    # functions
+        - max()
+        - swap()
+        - lower_bound()
+        - upper_bound()
