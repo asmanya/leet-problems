@@ -6,6 +6,7 @@ Listing all the topics used while solving the questions
     # modula behaviour
     # int_min/int_max
     # static_cast<>
+    # XOR
 
 -- vectors
     # size()
