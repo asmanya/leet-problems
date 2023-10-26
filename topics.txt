@@ -7,6 +7,8 @@ Listing all the topics used while solving the questions
     # int_min/int_max
     # static_cast<>
     # XOR
+    # lambda function
+    # npos
 
 -- vectors
     # size()
@@ -15,6 +17,15 @@ Listing all the topics used while solving the questions
     # pushback()
     # sort()
     # v[position]
+
+-- strings
+    # min_element
+    # length()
+    # empty()
+    # push_back()
+    # pop_back()
+    # str[].at()
+    # find()
 
 -- hashing
 
