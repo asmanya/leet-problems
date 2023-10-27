@@ -17,6 +17,9 @@ Listing all the topics used while solving the questions
     # pushback()
     # sort()
     # v[position]
+    # max()
+    # back()
+    # empty()
 
 -- strings
     # min_element
