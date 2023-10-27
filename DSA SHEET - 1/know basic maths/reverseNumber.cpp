@@ -17,9 +17,3 @@ public:
         return int(rev);
     }
 };
-
-int main()
-{
-    
-    return 0;
-}
