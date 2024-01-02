@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    int orangesRotting(vector<vector<int>>& grid) {
+        int n = grid.size();
+        int m = grid[0].size();
+
+        int vis[n][m];
+        int cntFresh = 0;
+        queue<pair<pair<int,int>, int>> q;
+
+        // setting up visited array and queue at time = 0
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < m; j++) {
+                if(grid[i][j] == 2) {
+                    q.push({{i, j}, 0});
+                    vis[i][j] = 2;
+                }
+                else {
+                    vis[i][j] = 0;
+                    if(grid[i][j] == 1) cntFresh++; 
+                }
+            }
+        }
+
+        int tm = 0;
+        int dir[4][2] = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+        int cnt = 0;
+        while(!q.empty()) {
+            int r = q.front().first.first;
+            int c = q.front().first.second;
+            int t = q.front().second;
+            tm = max(t, tm);
+            q.pop();
+            for(int d = 0; d < 4; d++) {
+                int nrow = r + dir[d][0];
+                int ncol = c + dir[d][1];
+                if(nrow >= 0 && nrow < n && ncol >= 0 && ncol < m && !vis[nrow][ncol] && grid[nrow][ncol] == 1) {
+                    vis[nrow][ncol] = 2;
+                    q.push({{nrow, ncol}, t + 1});
+                    cnt++;
+                }
+            }
+        }
+        if(cnt != cntFresh) return -1;
+        return tm;
+    }
+};
