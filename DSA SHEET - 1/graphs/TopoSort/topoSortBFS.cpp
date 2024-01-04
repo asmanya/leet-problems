@@ -2,7 +2,7 @@
 using namespace std;
 
 vector<int> topologicalSort(vector<vector<int>> &graph, int edges, int nodes) {
-    int indegree[nodes];
+    vector<int> indegree(nodes, 0);
     for(int i = 0; i < nodes; i++) {
         for(auto it: graph[i]) {
             indegree[it]++;
